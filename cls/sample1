@@ -1,0 +1,17 @@
+addr()
+{
+	echo "Rapid"
+	echo "Hyderabad"
+}
+
+add()
+{
+	x=$1
+	y=$2
+
+	echo "x : $x"
+	echo "y : $y"
+
+	echo "Result : `expr $x + $y`"
+
+}

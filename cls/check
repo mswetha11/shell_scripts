@@ -1,0 +1,17 @@
+if [ $# -ne 1 ];
+then
+	echo "Please specify valid argument..."
+	echo "Usage: $0 <servicename>"
+	exit
+fi
+
+sn=$1
+
+ps -ef | grep -v grep | grep -i $sn > /dev/null 2>&1
+
+if [ $? -eq 0 ];
+then
+	echo "Service $sn is running..."
+else
+	echo "Service $sn is not running..."
+fi
